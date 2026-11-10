@@ -1,9 +1,7 @@
-
 #!/bin/bash
 
-echo "================================="
-echo "    OUTIL DE SURVEILLANCE LINUX"
-echo "================================="
+echo "=== LANCEMENT DES SCRIPTS ==="
 echo "Demarrage de la surveillance"
 bash scripts/surveillance.sh
-echo "Surveillance terminee avec succes"
+echo "$(date): Surveillance executee" >> surveillance.log
+echo "Fin du programme"
