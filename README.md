@@ -126,3 +126,9 @@ J'ai testé le script pour vérifier qu'il affiche correctement les informations
 J'ai travaillé sur la branche `feature/audit-local`, liée à l'Issue #2.
 
 J'ai effectué plusieurs commits pour ajouter progressivement les fonctionnalités, puis créé une Pull Request vers `develop` pour faire vérifier mon travail par mes collègues.
+
+## Conflit lors de la release avec le github actions
+
+Il était impossible de merge la release dans la main du à l'echec du github actions 
+
+Solution : Suppression du github actions
