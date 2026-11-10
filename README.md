@@ -61,3 +61,14 @@ Nous utilisons un workflow basé sur les branches :
 - `develop` : branche de développement et d'intégration.
 - `feature/*` : branches dédiées aux nouvelles fonctionnalités.
 - `fix/*` : branches dédiées aux corrections de bugs.
+
+## QUESTION
+
+1. Quel est l’intérêt de séparer développements en cours et versions stables ?
+2. Pourquoi imposer une revue de code avant intégration ?
+3. Quelles situations provoquent un conflit Git et pourquoi sa résolution n’est-elle pas toujours automatique ?
+4. Quelle différence entre correction classique et correction urgente de production ?
+5. Pourquoi répercuter une correction de production dans les développements en cours ?
+6. Quel est le rôle d’une branche de release ?
+7. Comment GitHub Projects et les Issues facilitent-ils organisation et traçabilité ?
+8. Comment retrouver l’origine d’une modification dans l’historique GitHub ?
