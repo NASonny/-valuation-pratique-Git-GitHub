@@ -5,15 +5,22 @@ echo "====================================="
 echo "    AUDIT DES UTILISATEURS LOCAUX"
 echo "====================================="
 
-# Vérification du fichier des utilisateurs
+# Vérification du fichier
 if [[ ! -r /etc/passwd ]]; then
     echo "Erreur : impossible de lire /etc/passwd"
     exit 1
 fi
 
-# Lecture des comptes utilisateurs Linux
+total=0
+
+# Lecture des comptes utilisateurs
 while IFS=: read -r user password uid gid info home shell
 do
+    # Ignorer les commentaires et lignes vides
+    [[ -z "$user" || "$user" == \#* ]] && continue
+
+    total=$((total + 1))
+
     echo "Nom utilisateur : $user"
     echo "UID             : $uid"
     echo "GID             : $gid"
@@ -23,4 +30,5 @@ do
 
 done < /etc/passwd
 
+echo "Nombre total de comptes : $total"
 echo "===== FIN DE L'AUDIT ====="
