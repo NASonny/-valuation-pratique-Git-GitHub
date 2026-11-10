@@ -15,3 +15,9 @@ jobs:
     steps:
       - name: Recuperer le depot
         uses: actions/checkout@v4
+
+      - name: Tester le script d'audit local
+        shell: bash
+        run: |
+          bash -n ./scripts/audit.sh
+          bash ./scripts/audit.sh
